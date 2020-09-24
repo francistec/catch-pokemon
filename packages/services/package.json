@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "author": "Francis L. Tec Can <francis.tec.can@gmail.com>"
+  "author": "Francis L. Tec Can <francis.tec.can@gmail.com>",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
 }

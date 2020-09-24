@@ -1,6 +1,6 @@
 # React Code Challenge:
 
-**Applicant:**
+**Applicant: Francis Leandro Tec Can**
 
 **Date & Time:** April 25th, 2019, (9:00PM - 10:00PM)
 

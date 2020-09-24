@@ -1,8 +1,8 @@
 import React from 'react';
 import configureStore from './configureStore';
-import { Card } from './components';
 import { Provider } from 'react-redux';
 import { SearchBoxContainer } from './containers/SearchBox/index';
+import { ListContainer } from './containers/List/index';
 import './App.css'; 
 const initialStore = {};
 const store = configureStore(initialStore);
@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
       <div className="App">
         <SearchBoxContainer />
-        <Card />
+        <ListContainer />
       </div>
     </Provider>
   );

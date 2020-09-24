@@ -8,6 +8,7 @@ const setContent = (state, action) => produce(state, ()=> action.payload );
 export const pokemonReducer = produce(
   handleActions({
     [searchConstants.HANDLE_INPUT_SEARCH_REDUCER]: setContent,
+    [searchConstants.HANDLE_INPUT_ERROR_REDUCER]: setContent
   },
   false
   )

@@ -1,33 +1,33 @@
 import { connect } from 'react-redux'
 import { compose, bindActionCreators } from 'redux';
-import { SearchBox } from '../../components'
+import { List } from '../../components'
 import * as Selectors from './selector';
-import  { pokemonReducer }  from './reducer';
+import  { pokeListReducer }  from './reducer';
 import  injectReducer  from '../../utils/injectReducer';
-import { searchboxBindActions } from './actions'
-import searchBoxSaga  from './saga';
+import { listBindActions } from './actions'
+import listSaga  from './saga';
 import injectSaga from '../../utils/injectSaga';
 
 const mapStateToProps = state => ({
-  error: Selectors.getErrorSearch(state)
+  pokemonList: Selectors.getAllPokemons(state)
 });
 
 const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(searchboxBindActions, dispatch)
+  actions: bindActionCreators(listBindActions, dispatch)
 })
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
 const withReducers = injectReducer({
-  key:'searchBox',
-  reducer: pokemonReducer
+  key:'listBox',
+  reducer: pokeListReducer
 });
 
-const withSaga = injectSaga({key: 'searchBoxSaga', saga: searchBoxSaga});
+const withSaga = injectSaga({key: 'listSaga', saga: listSaga});
 
-export const SearchBoxContainer = compose(
+export const ListContainer = compose(
   withConnect,
   withReducers,
   withSaga
-)(SearchBox);
+)(List);
 
