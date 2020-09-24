@@ -1,0 +1,7 @@
+{
+  "name": "@catch-pokemon/services",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Francis L. Tec Can <francis.tec.can@gmail.com>"
+}
