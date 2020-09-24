@@ -1,17 +1,14 @@
-const pokemons = (state = [], action) => {
-    switch (action.type) {
-      case 'SET_POKEMON_TO_LIST':
-        return [
-          ...state,
-          {
-            id: action.id,
-            text: action.text,
-            completed: false
-          }
-        ];
-      default:
-        return state
-    }
-}
-  
-export default pokemons;
+import produce from 'immer';
+import { handleActions } from 'redux-actions';
+import * as searchConstants from './constants';
+
+const setContent = (state, action) => produce(state, ()=> action.payload );
+
+
+export const pokemonReducer = produce(
+  handleActions({
+    [searchConstants.HANDLE_INPUT_SEARCH_REDUCER]: setContent,
+  },
+  false
+  )
+);
