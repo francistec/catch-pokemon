@@ -1,7 +1,6 @@
 import React from 'react';
 
-export const SearchBox = ( {addPokemon }) => {
-    console.log(addPokemon);
+export const SearchBox = ({ addPokemon, pokemons }) => {
     return (
         <>
             <div className="form-control">
