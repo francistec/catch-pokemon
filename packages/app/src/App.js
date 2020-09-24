@@ -1,15 +1,13 @@
 import React from 'react';
-import { Card, SearchBox } from './components';
-import  {Pokemon}  from '@catch-pokemon/services';
+import { Card } from './components';
+import SearchBoxContainer from './containers/SearchBox';
 import './App.css';
 
 function App() {
-
   return (
     <>
-     
       <div className="App">
-        <SearchBox />
+        <SearchBoxContainer />
         <Card />
       </div>
     </>
