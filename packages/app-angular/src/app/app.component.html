@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+      <div class="col-lg-12">
+          <h2>Cath Pokemon</h2>
+      </div>
+      <div class="col-lg-12">
+          <div class="input-group mb-3 has-error">
+              <input
+                [className]="(error != '') ? 'form-control is-invalid' : ' form-control'"
+                [(ngModel)]="term" type="text"   placeholder="Search pokemon">
+              <div class="input-group-append">
+                <button (click)="searchPokemon()" class="btn btn-outline-secondary" type="button">Catch</button>
+              </div>
+              <div class="invalid-feedback text-error" *ngIf="error != ''">{{error}}</div>
+          </div> 
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <div *ngFor="let pokemon of allPokemons" class="col-lg-4"> 
+      <div class="card" style="width: 18rem;">
+          <img src="{{pokemon.Image}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{pokemon.Name}}</h5>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+</div>
